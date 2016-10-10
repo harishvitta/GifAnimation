@@ -23,14 +23,19 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewDidAppear:animated];
 
-    self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
+    //self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
+    self.backgroundImageView.image = [UIImage animatedImageWithImages:(self.images) duration:self.duration];
+    
+   // [UIImage animatedImageWithAnimatedGIFURL:url];
     self.titleLabel.text = self.titleText;
 
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

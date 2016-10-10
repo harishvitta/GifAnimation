@@ -14,4 +14,6 @@
 @property NSUInteger pageIndex;
 @property NSString *titleText;
 @property NSString *imageFile;
+@property NSArray<UIImage *> *images;
+@property double duration;
 @end
