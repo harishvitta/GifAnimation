@@ -54,7 +54,7 @@
 
 - (PageContentViewController *)viewControllerAtIndex:(NSUInteger)index
 {
-    if (([self.pageTitles count] == 0) || (index >= [self.pageTitles count])) {
+    if (((self.pageTitles).count == 0) || (index >= (self.pageTitles).count)) {
         return nil;
     }
     
@@ -101,7 +101,7 @@
     }
     
     index++;
-    if (index == [self.gifImages count]) {
+    if (index == (self.gifImages).count) {
         return nil;
     }
     return [self viewControllerAtIndex:index];
@@ -109,7 +109,7 @@
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
-    return [self.gifImages count];
+    return (self.gifImages).count;
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
